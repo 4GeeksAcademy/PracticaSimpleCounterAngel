@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 
 const SecondsCounter = (props) => {
@@ -17,14 +17,7 @@ const SecondsCounter = (props) => {
     return () => clearInterval(intervalId);
   }, []);
 
-const contador = () => {
 
-    const [contador, setContador] = useState(0);
-
-    const reiniciar = () => {
-        setContador(0);
-    }
-}
   return (
     <div>
       <div className="bg-light d-flex justify-content-center text-center mt-3 p-5">
@@ -70,10 +63,6 @@ const contador = () => {
         >
           {first}
         </div>
-      </div>
-      <div className="d-flex justify-content-center">
-        <button className="btn btn-secondary mx-2 mt-3" onClick={reiniciar}> Reiniciar</button>
-        <button className="btn btn-danger mx-2 mt-3">Parar</button>
       </div>
     </div>
   );
